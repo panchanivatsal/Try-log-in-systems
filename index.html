@@ -36,7 +36,7 @@
                         <input type="text" class="hover"
                             style="padding: 10px; width: 100%;border-radius: 10px; display: block;"
                             placeholder="Enter the Confirm password" id="cpassword">
-                        <button
+                        <button type="button`"
                             style="display: block; background-color: #91a2d7; border: none; color: white; width: 100%;margin: 20px 0; padding: 8px 0; border-radius: 10px; font-size: 16px;"
                             id="account" onclick="myFunction()">Create
                             Account</button>
@@ -75,51 +75,58 @@
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
         var cpassword = document.getElementById('cpassword').value;
-        // var checkbox = document.getElementById('checkbox');
+        var checkbox = document.getElementById('checkbox');
 
-        // try {
-        //     if (password == "" || cpassword == "") {
-        //         throw "All data fille";
-        //     }
-        //     // else if (name == "") {
-        //     //     throw "Enter the NAme";
-        //     // }
-        //     else if (email == "") {
-        //         throw "Enter the Email";
-        //     }
-        //     else if (!email.match(mailFormat)) {
-        //         throw "Invalid Email !";
-        //     }
-        //     else if (password == cpassword) {
-        //         alert("Enter the confrom password");
-        //     }
-        //     else if (password.length > 6 || password.length < 12) {
-        //         throw "not vaild passoword";
-        //     }
-        //     else {
-        //         throw "Your Registration is a Sucssfull";
-        //     }
-        // }
-        // catch (from) {
-        //     alert(from);
-        // }
         try {
-            if (name == "") {
+            if (password == "" || cpassword == "") {
+                throw "All data fille";
+            }
+            else if (name == "") {
                 throw "Enter the NAme";
             }
-        }
-        catch (name) {
-            alert(name);
-        }
-
-        try {
-            if (email == "") {
-                throw "Enter the email";
+            else if (email == "") {
+                throw "Enter the Email";
+            }
+            else if (!email.match(mailFormat)) {
+                throw "Invalid Email !";
+            }
+            else if (!password == cpassword) {
+                throw "Enter the confrom password";
+            }
+            else if(!checkbox){
+                throw "Fill the condition"; 
+            }
+            else if (!password.length >= 6 && !password.length <= 12) {
+                throw "not vaild passoword";
+            }
+            else {
+                throw "Your Registration is a Sucssfull";
             }
         }
-        catch (email) {
-            alert(email);
+        catch (from) {
+            alert(from);
         }
+
+
+
+
+        // try {
+        //     if (name == "") {
+        //         throw "Enter the NAme";
+        //     }
+        // }
+        // catch (name) {
+        //     alert(name);
+        // }
+
+        // try {
+        //     if (email == "") {
+        //         throw "Enter the email";
+        //     }
+        // }
+        // catch (email) {
+        //     alert(email);
+        // }
 
         // try {
         //     if (password == "" || cpassword=="") {
@@ -131,22 +138,22 @@
         // }
 
 
-        try {
-            if (!password == cpassword) {
-                throw "Enter the Same Password";
-            }
-        }
-        catch (cpassword) {
-            alert(cpassword);
-        }
-        try {
-            if (!password || !name || !email || cpassword) {
-                throw "sucessfull";
-            }
-        }
-        catch (sucessfull) {
-            alert(sucessfull);
-        }
+        // try {
+        //     if (!password == cpassword) {
+        //         throw "Enter the Same Password";
+        //     }
+        // }
+        // catch (cpassword) {
+        //     alert(cpassword);
+        // }
+        // try {
+        //     if (!password || !name || !email || cpassword) {
+        //         throw "sucessfull";
+        //     }
+        // }
+        // catch (sucessfull) {
+        //     alert(sucessfull);
+        // }
     }
     function myFunction() {
         window.open("index2(1).html");
